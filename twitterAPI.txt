@@ -1,0 +1,22 @@
+Outlook Account : babayaga5751990@outlook.com	
+Password  : warhawk33721!
+
+Twitter API keys and tokens
+
+API key : XOW5f9s7u5OxYdkZfK7pM2Wmk
+
+API key secret : 3lBgpxh3xchR6p4puGAbyKmiFAxP5U579rgfeeOSriaRRJrIBs
+
+Bearer token : AAAAAAAAAAAAAAAAAAAAALxjKgEAAAAA7NRWCucQW86xak4X%2FkeCjfKdxqA%3DkTcLOvoOu05aj5SLDlF90rOzVxWcGdUqIRtiiimxenmUPv0Y9j
+----------------------------------------------------------------------------
+Access token : 1089954510062145536-FZ7sGKPc7f1BSjHMYisTxx0RQS8v4d
+
+Access token secret : Y7MzHvNBrkm8Q3OLwOUJzMpgbqsEyP8htlx71Ij6aoE7B
+
+Twitter APP API
+
+API key : rDYhmmxCKaF0NFsyKmW4gYF59
+
+Api secret key : FSaIjlga8ULc0bxu7tSuDliMVc2D535tH14YLHOPcxLCXidArf
+
+Bearer : AAAAAAAAAAAAAAAAAAAAAN5kKgEAAAAANLHKiFAupvNLDZ%2BJuwT3%2BS12aC4%3D8F7YJQziau4yfcgjmpDOfixaSeUBiDDRhcYQyPJWFxiLIoBY9Q
