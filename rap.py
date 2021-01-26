@@ -44,40 +44,43 @@ api = tweepy.API(auth)
 
 #twilio
 client = Client(account_sid, auth_token)
+while 1:
+    try:
+        def text(msg):
+            message = client.messages.create(
+                body=msg,
+                from_=contacts['my_twilioUS'],
+                to=contacts['my_cell']
+            )
+            message = client.messages.create(
+                body=msg,
+                from_=contacts['my_twilioGB'],
+                to=contacts['dhiral_cell']
+            )
+            print(msg, '\t', message.sid)
 
-def text(msg):
-    message = client.messages.create(
-        body=msg,
-        from_=contacts['my_twilioUS'],
-        to=contacts['my_cell']
-    )
-    message = client.messages.create(
-        body=msg,
-        from_=contacts['my_twilioGB'],
-        to=contacts['dhiral_cell']
-    )
-    print(msg, '\t', message.sid)
 
-
-class MyStreamListener(tweepy.StreamListener):
-    with suppress(Exception):
-        def on_status(self, status):
-            capitalized_tweet = status.text.upper()
-            normalTweet = status.text
-            userid = str(status.user.id)
-            if substring in capitalized_tweet and userid == raphubdaily and capitalized_tweet not in whitelist: #ps5 here
-                print('\n\nTweet Found!')
-                print(status.text)
-                text(normalTweet)
-                print('\nListening again...')
-                return True
-            elif userid == raphubdaily:
-                print('\nRapHubDaily tweeted : ',normalTweet)
-print('RapHubDaily.')
-print('\nListening...')
-myStreamListener = MyStreamListener()
-myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
-myStream.filter(follow=[raphubdaily])
+        class MyStreamListener(tweepy.StreamListener):
+            with suppress(Exception):
+                def on_status(self, status):
+                    capitalized_tweet = status.text.upper()
+                    normalTweet = status.text
+                    userid = str(status.user.id)
+                    if substring in capitalized_tweet and userid == raphubdaily and capitalized_tweet not in whitelist: #ps5 here
+                        print('\n\nTweet Found!')
+                        print(status.text)
+                        text(normalTweet)
+                        print('\nListening again...')
+                        return True
+                    elif userid == raphubdaily:
+                        print('\nRapHubDaily tweeted : ',normalTweet)
+        print('RapHubDaily.')
+        print('\nListening...')
+        myStreamListener = MyStreamListener()
+        myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
+        myStream.filter(follow=[raphubdaily])
+    except:
+        pass
 
 
 
