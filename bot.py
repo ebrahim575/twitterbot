@@ -1,6 +1,7 @@
 import tweepy
 import twitter_credentials
 from contextlib import suppress
+import time
 
 ACCESS_TOKEN = '1089954510062145536-6oMv54sW8kOb8RpyLjCVnioVLWVVx2'
 ACCESS_TOKEN_SECRET = '0cCeeN6sS8zQ4ejNktQ9fk7PE0EFWP377Yf3dXxOCO6jz'
@@ -49,8 +50,9 @@ while 1:
         print('\nListening...')
         counter+=1
         if (counter == 25):
-            #direct_message = api.send_direct_message('566750505', 'The bot is till running!')
-            #print(direct_message.message_create['message_data']['text'])
+            direct_message = api.send_direct_message('566750505', 'The bot is till running!')
+            print(direct_message.message_create['message_data']['text'])
+            time.sleep(10)
             counter = 0
 
         myStreamListener = MyStreamListener()
